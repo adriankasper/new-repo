@@ -7,11 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/*<Hello
-          name="Adrian"
-          age={21}
-        />*/}
-        <Maths />
+        <h1>Hi</h1>
       </header>
     </div>
   )
