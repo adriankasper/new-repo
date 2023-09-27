@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/new-repo/static/css/main.073c9b0a.css",
-    "main.js": "/new-repo/static/js/main.6b0c7920.js",
+    "main.css": "/new-repo/static/css/main.52eb69de.css",
+    "main.js": "/new-repo/static/js/main.70af06a6.js",
     "static/js/787.7b63f85e.chunk.js": "/new-repo/static/js/787.7b63f85e.chunk.js",
-    "static/media/logo.svg": "/new-repo/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/new-repo/index.html",
-    "main.073c9b0a.css.map": "/new-repo/static/css/main.073c9b0a.css.map",
-    "main.6b0c7920.js.map": "/new-repo/static/js/main.6b0c7920.js.map",
+    "main.52eb69de.css.map": "/new-repo/static/css/main.52eb69de.css.map",
+    "main.70af06a6.js.map": "/new-repo/static/js/main.70af06a6.js.map",
     "787.7b63f85e.chunk.js.map": "/new-repo/static/js/787.7b63f85e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.6b0c7920.js"
+    "static/css/main.52eb69de.css",
+    "static/js/main.70af06a6.js"
   ]
 }
