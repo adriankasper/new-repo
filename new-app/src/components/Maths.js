@@ -4,16 +4,22 @@ import React, { useState } from "react"
 const Maths = () => {
   const [count, setCount] = useState(0)
 
+  const changeCount = amount =>
+    setCount(previousCount => previousCount + amount)
+
   return (
     <>
       <h2>{count}</h2>
-      <Button
-        variant="contained"
-        onClick={() => setCount(previousCount => previousCount + 1)}
-        sx={{ marginBottom: 1 }}
-      >
-        Press me +1
-      </Button>
+      {[-100, -10, -1, 1, 10, 100].map(number => (
+        <Button
+          key={number}
+          variant="contained"
+          onClick={() => changeCount(number)}
+          sx={{ marginBottom: 1 }}
+        >
+          Press me {number}
+        </Button>
+      ))}
       <Button
         variant="contained"
         onClick={() =>
