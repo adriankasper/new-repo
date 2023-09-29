@@ -6,7 +6,7 @@ const Fetching = () => {
 
   const fetchData = async () => {
     const response = await fetch(
-      "https://jsonplaceholder.typicode.com/posts?_start=20&_end=30"
+      "https://jsonplaceholder.typicode.com/posts?_start=1&_end=30"
     )
     const data = await response.json()
 

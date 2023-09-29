@@ -7,6 +7,7 @@ import MyForm from "./components/MyForm"
 import PropDrilling from "./components/PropDrilling"
 import Context from "./components/Context"
 import Fetching from "./components/Fetching"
+import AppBar from "./components/AppBar"
 
 function App() {
   const [show, setShow] = useState(true)
@@ -14,15 +15,19 @@ function App() {
   const toggleShow = () => setShow(previousShow => !previousShow)
 
   return (
-    <div className="Container">
-      <h1>Raimo</h1>
-      <Fetching />
-      <PropDrilling />
-      <Context />
-      <MyForm />
-      <Maths />
-      <Show show={show} />
-      <Toggle toggleShow={toggleShow} />
+    <div>
+      <AppBar />
+      <div className="Container">
+        <h1>Adrian</h1>
+
+        <Fetching />
+        <PropDrilling />
+        <Context />
+        <MyForm />
+        <Maths />
+        <Show show={show} />
+        <Toggle toggleShow={toggleShow} />
+      </div>
     </div>
   )
 }
