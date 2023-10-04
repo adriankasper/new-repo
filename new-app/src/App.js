@@ -1,34 +1,38 @@
-import { useState } from "react"
+import { ThemeProvider, createTheme } from "@mui/material/styles"
 import "./App.css"
-import Toggle from "./components/Toggle"
-import Show from "./components/Show"
-import Maths from "./components/Maths"
-import MyForm from "./components/MyForm"
-import PropDrilling from "./components/PropDrilling"
-import Context from "./components/Context"
-import Fetching from "./components/Fetching"
-import AppBar from "./components/AppBar"
+import Layout from "./layout/Layout"
+import { Outlet } from "react-router-dom"
+import Header from "./layout/Header"
+import { useLocation } from "react-router-dom"
+import { Typography } from "@mui/material"
+
+const theme = createTheme({
+  palette: {
+    mode: "light",
+    primary: {
+      main: "rgb(144, 3, 252)"
+    }
+  }
+})
 
 function App() {
-  const [show, setShow] = useState(true)
-
-  const toggleShow = () => setShow(previousShow => !previousShow)
+  let location = useLocation()
 
   return (
-    <div>
-      <AppBar />
-      <div className="Container">
-        <h1>Adrian</h1>
-
-        <Fetching />
-        <PropDrilling />
-        <Context />
-        <MyForm />
-        <Maths />
-        <Show show={show} />
-        <Toggle toggleShow={toggleShow} />
-      </div>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Header title="new-repo" />
+      <Layout>
+        {location?.pathname === "/" && (
+          <Typography
+            variant="h4"
+            sx={{ marginLeft: 10, marginTop: 5 }}
+          >
+            Welcome to my humble abode
+          </Typography>
+        )}
+        <Outlet />
+      </Layout>
+    </ThemeProvider>
   )
 }
 
