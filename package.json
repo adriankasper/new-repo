@@ -1,0 +1,25 @@
+{
+  "name": "new-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "frontend": "cd frontend && npm run start",
+    "backend": "cd backend && npm run dev",
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriankasper/new-repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adriankasper/new-repo/issues"
+  },
+  "homepage": "https://github.com/adriankasper/new-repo#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
